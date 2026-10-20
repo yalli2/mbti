@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>타입 심포니 — Type Symphony</title>
+<meta name="description" content="서로 다른 선율이 하모니가 되는 시간. 성격 유형(MBTI) 이론을 챕터별로 함께 실습하고 모두의 결과를 실시간으로 확인하는 HR 성인 학습 프로그램.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234B47C9'/%3E%3Cpath d='M12 48 L24 40 L34 42 L46 26 L54 14' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='54' cy='14' r='5' fill='%23F0B63A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#app">본문으로 건너뛰기</a>
+
+<header class="topbar">
+  <button id="menuBtn" class="icon-btn menu" type="button" aria-label="챕터 목록 열기" aria-expanded="false" aria-controls="chapnav">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="#/">
+    <svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#4B47C9"/><path d="M12 48 L24 40 L34 42 L46 26 L54 14" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="54" cy="14" r="5" fill="#F0B63A"/></svg>
+    <span class="brand-t">타입 심포니</span><span class="brand-en">Type Symphony</span>
+  </a>
+  <div class="top-right">
+    <span id="status" class="status" role="status"></span>
+    <button id="roomBtn" class="room-btn" type="button" aria-label="이름과 방 코드 바꾸기"></button>
+  </div>
+</header>
+
+<div class="shell">
+  <nav id="chapnav" class="chapnav" aria-label="챕터"></nav>
+  <main id="app" tabindex="-1"></main>
+</div>
+
+<footer class="foot">
+  <p>타입 심포니 · 성인 학습용 성격 유형 워크숍. 교재의 개념을 바탕으로 문항·프로필·도해를 새로 구성했으며, 공식 MBTI® 검사나 채점표가 아닙니다. MBTI®는 The Myers &amp; Briggs Foundation의 등록 상표입니다.</p>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<dialog id="join" aria-labelledby="join-t">
+  <form id="join-form" method="dialog">
+    <h2 id="join-t">함께 시작해요</h2>
+    <p class="dlg-p">결과에 표시될 이름과, 같은 수업에 모일 방 코드를 정해 주세요.</p>
+    <label class="dlg-l" for="jn-name">이름(별칭)</label>
+    <input id="jn-name" type="text" maxlength="12" required placeholder="예) 지수" autocomplete="nickname">
+    <label class="dlg-l" for="jn-room">방 코드</label>
+    <input id="jn-room" type="text" maxlength="24" placeholder="예) HR2026" autocomplete="off">
+    <p class="dlg-hint">같은 방 코드를 입력한 사람끼리 결과를 공유합니다. 영문·숫자·한글만 쓸 수 있어요. 개인정보·회사 기밀은 입력하지 마세요.</p>
+    <div class="dlg-actions"><button type="button" id="join-cancel" class="btn ghost">나중에</button><button type="submit" class="btn primary">들어가기</button></div>
+  </form>
+</dialog>
+
+<script src="config.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/diagrams.js"></script>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/samples.js"></script>
+<script src="js/ch1.js"></script>
+<script src="js/ch2.js"></script>
+<script src="js/ch3to6.js"></script>
+<script src="js/ch7.js"></script>
+<script src="js/ch8.js"></script>
+<script src="js/ch9.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
